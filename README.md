@@ -10,7 +10,6 @@ An AI-powered legal advisor web application built with Node.js and Google's Gemi
 - 🤖 Gemini Pro integration for high-quality responses
 - 🗂️ (Optional) Future RAG integration with uploaded legal documents
 - 📁 Simple REST API backend
-- 🌐 EJS-based frontend (optional)
 - 🔐 Secure setup with `.env` support
 
 ---
@@ -19,7 +18,7 @@ An AI-powered legal advisor web application built with Node.js and Google's Gemi
 
 - **Backend**: Node.js, Express
 - **AI Model**: Gemini Pro (Google Generative AI)
-- **Frontend**: HTML/CSS + EJS (or any frontend you like)
+- **Frontend**: HTML
 - **File Storage**: Local (can be upgraded to Cloud Storage)
 - **RAG (Planned)**: Chroma / FAISS + sentence-transformers
 
