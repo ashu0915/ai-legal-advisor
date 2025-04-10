@@ -27,6 +27,6 @@ An AI-powered legal advisor web application built with Node.js and Google's Gemi
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/<your-username>/ai-legal-advisor.git
+git clone https://github.com/ashu0915/ai-legal-advisor.git
 cd ai-legal-advisor/backend
 npm install
