@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Legal Advisor</title>
+    <style>
+        body { font-family: Arial; margin: 30px; }
+        textarea { width: 100%; height: 100px; margin-bottom: 10px; }
+        button { padding: 10px 20px; }
+        pre { background: #f4f4f4; padding: 20px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>AI Legal Advisor (India)</h1>
+    <form id="chatForm">
+        <textarea id="question" placeholder="Ask a legal question..."></textarea>
+        <br>
+        <button type="submit">Ask</button>
+    </form>
+    <h2>Response:</h2>
+    <pre id="responseBox"></pre>
+
+    <script>
+        document.getElementById("chatForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const question = document.getElementById("question").value;
+            console.log("here1");
+            const res = await fetch("/api/ai/ask", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ question }),
+            });
+            console.log("here2");
+            const data = await res.json();
+            console.log(data);
+            document.getElementById("responseBox").innerText = data.answer;
+        });
+    </script>
+</body>
+</html>
